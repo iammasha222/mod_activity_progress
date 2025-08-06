@@ -1,0 +1,23 @@
+<div class="activity-progress">
+    <div class="progress-overview">
+        <strong>
+            Total course progress: {{progress}}%
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: {{progress}}%;"></div>
+            </div>
+        </strong> 
+    </div>
+
+    {{#activities}}
+        <div class="activity">
+            <span class="activity-name">{{name}}</span>
+            {{#completed}}
+                 {{progress}}% - Done!
+            {{/completed}}
+            
+            {{^completed}}
+                {{progress}}% - In progress...
+            {{/completed}}
+        </div>
+    {{/activities}}
+</div>
